@@ -1,20 +1,19 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST["nombre"];
-    $email = $_POST["email"];
-    $mensaje = $_POST["mensaje"];
+function enviarCorreo() {
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var mensaje = document.getElementById("mensaje").value;
 
-    $para = "soporte.wisestock@gmail.com"; // Cambia esto al correo donde quieres recibir los mensajes.
-    $asunto = "Nuevo mensaje de contacto";
+    var contenido = "Nombre: " + nombre + "\n";
+    contenido += "Correo electrónico: " + email + "\n\n";
+    contenido += "Mensaje:\n" + mensaje;
 
-    $contenido = "Nombre: $nombre\n";
-    $contenido .= "Correo electrónico: $email\n\n";
-    $contenido .= "Mensaje:\n$mensaje";
+    var asunto = "Nuevo mensaje de contacto";
 
-    // Envía el correo
-    mail($para, $asunto, $contenido);
+    // Componer el enlace de correo
+    var mailtoLink = "mailto:soporte.wisestock@gmail.com" + "?subject=" + encodeURIComponent(asunto) + "&body=" + encodeURIComponent(contenido);
 
-    // Redirige al usuario a una página de confirmación
-    header("Location: confirmacion.html");
+    // Abrir el cliente de correo del usuario
+    window.location.href = mailtoLink;
 }
-?>
+
+document.getElementById("btnEnviar").addEventListener("click", enviarCorreo);
