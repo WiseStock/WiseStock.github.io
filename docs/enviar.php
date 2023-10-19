@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $mensaje = $_POST["mensaje"];
 
-    $para = "contacto@wisestock.tech"; // Cambia esto al correo donde quieres recibir los mensajes.
+    $para = "soporte.wisestock@gmail.com"; // Cambia esto al correo donde quieres recibir los mensajes.
     $asunto = "Nuevo mensaje de contacto";
 
     $contenido = "Nombre: $nombre\n";
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Envía el correo
     mail($para, $asunto, $contenido);
 
-    // Puedes redirigir al usuario a una página de confirmación si lo deseas.
+    // Redirige al usuario a una página de confirmación
     header("Location: confirmacion.html");
 }
 ?>
