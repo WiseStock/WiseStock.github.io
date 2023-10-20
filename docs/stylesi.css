@@ -15,8 +15,8 @@ body {
 }
 
 input {
-    background-color:  rgb(200, 238, 254);
-    border: 7px solid rgb(200, 238, 254);
+    background-color:  #fdd2ba;
+    border: 7px solid #fdd2ba;
     border-radius: 10px;
     margin: 10px;
     width: 300px; /* Ajusta el ancho según tus preferencias */
@@ -24,13 +24,13 @@ input {
 }
 
 button {
-    background-color: rgb(72, 195, 248);
+    background-color: #FF965E;
     border-radius: 10px; /* Redondea el botón */
     font-size: 15px; /* Aumenta el tamaño del texto */
     margin: 10px;
     color: rgb(255, 255, 255); /* Color del texto */
     font-family: 'Montserrat', sans-serif;
-    border: 10px solid rgb(72, 195, 248);
+    border: 10px solid #FF965E;
 }
 
 label {
