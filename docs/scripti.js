@@ -6,7 +6,7 @@ function validarFormulario(event) {
 
     if (usuario === "OM-Ampersand" && contrasena === "OModa124*") {
         // Redirigir a la segunda ventana
-        window.location.href = "bienvenido.html";
+        window.location.href = "https://om-ampersand.github.io/bienvenido.html";
     } else if (usuario === "JugueteriaEureka" && contrasena === "Eureka124*") {
         // Hacer algo si el usuario y contraseña son diferentes
         window.location.href = "https://jugueteriaeureka.github.io/bienvenido.html";
