@@ -10,6 +10,9 @@ function validarFormulario(event) {
     } else if (usuario === "JugueteriaEureka" && contrasena === "Eureka124*") {
         // Hacer algo si el usuario y contraseña son diferentes
         window.location.href = "http://jugueteriaeureka.wisestock.tech";
+    } else if (usuario === "COMEADE" && contrasena === "Comeade124*") {
+        // Hacer algo si el usuario y contraseña son diferentes
+        window.location.href = "https://comeade.wisestock.tech";
     } else {
         alert("Usuario o contraseña incorrectos.");
     }
